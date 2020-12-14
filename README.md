@@ -1,9 +1,9 @@
 # deepcube-full
 
-> A full stack project realized by flask for deploying the DeepCubeA algorithm in own server and visualize.
+> Advanced Software Engineering (ASE) course final project, a full stack project realized by flask for deploying the DeepCubeA algorithm in own server and visualize.
 
 ## Usage
-1. download the trained model from references follows, put in right file path(/code/savedModels/...).
+1. setting the working path in the `tools.py` to adjust to your own working environment.
 2. run `python server.py` in /interface/, to deploy website in current device.
 3. open web page with url [127.0.0.1:5000](127.0.0.1:5000), port can be edited in /interface/server.py bottom line.
 
