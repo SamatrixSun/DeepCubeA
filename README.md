@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # deepcube-full
 
 > Advanced Software Engineering (ASE) course final project, a full stack project realized by flask for deploying the DeepCubeA algorithm in own server and visualize.
@@ -11,3 +12,7 @@
 [1] Agostinelli, Forest, et al. "Solving the Rubik’s cube with deep reinforcement learning and search." Nature Machine Intelligence 1.8 (2019): 356-363.[[link]](https://www.nature.com/articles/s42256-019-0070-z.epdf?shared_access_token=-pCSsZa_J9bM8VyXLZLRctRgN0jAjWel9jnR3ZoTv0Osb8UCgUm5AQaSCMHWqWzsyV3KBcb13SAW-9IL1pAGd1HcSk40JSEjhoaBAi0ePvYh_5Dul6LvK0oJY1KI0ULo9O9HCut_y7aCTc93Th8m5g%3D%3D)
 
 [2] [DeepCubeA](https://codeocean.com/capsule/5723040/tree/v1) Source Code.
+=======
+# DeepCubeA
+ASE final project
+>>>>>>> cdaf3b9598bd7b66ce73839ab7587ff60d971797
