@@ -140,6 +140,7 @@ function enableInput() {
 	document.getElementById("scramble").disabled=false;
 	document.getElementById("solve").disabled=false;
 	document.getElementById("string_state").disabled=false;
+	document.getElementById("enableInput").disabled=false;
 	$(document).on("keypress", buttonPressed);
 }
 
@@ -206,6 +207,7 @@ function scrambleCube() {
 	}
 
 	nextState(0);
+	disableInput();
 }
 
 function judgeState() {
@@ -230,6 +232,7 @@ function stringInput(){
 		state[i] = parseInt(stateString[2*i]);
 	}
 	string2State(state);
+	disableInput();
 }
 
 function string2State(newState) {
@@ -237,12 +240,7 @@ function string2State(newState) {
 	var mid = 0
 	var small = 0
 	var t = 0
-	/*var stateArray = document.getElementById("input_state").value.split(", ");
-	for (var i = 0; i<54; i++){
-		state[i] = parseInt(stateArray[i]);
-	}
-	document.getElementById("solution_text").innerHTML = state;
-}*/
+	disableInput();
 	state = newState;
 	for (var j = 0; j < 8; j++){
 		large = corners[j] % 100;
@@ -391,9 +389,11 @@ function string2State(newState) {
 	if (stateFlags){
 		setStickerColors(state);
 		document.getElementById("solution_text").innerHTML = "Input Finished!";
+		enableInput();
 	}
 	else{
 		document.getElementById("solution_text").innerHTML = "Input Invalid!";
+		enableInput();
 	}
 }
 
@@ -493,7 +493,11 @@ $( document ).ready($(function() {
 	$('#string_state').click(function() {
 		stringInput()
 	});
-
+	
+	$('#enableInput').click(function() {
+		enableInput()
+	});
+	
 	$('#cube_div').on("mousedown", function(ev) {
 		lastMouseX = ev.clientX;
 		lastMouseY = ev.clientY;
