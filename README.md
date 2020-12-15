@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# deepcube-full
+# DeepCubeAdvanced
 
 > Advanced Software Engineering (ASE) course final project, a full stack project realized by flask for deploying the DeepCubeA algorithm in own server and visualize.
 
@@ -13,6 +12,3 @@
 
 [2] [DeepCubeA](https://codeocean.com/capsule/5723040/tree/v1) Source Code.
 =======
-# DeepCubeA
-ASE final project
->>>>>>> cdaf3b9598bd7b66ce73839ab7587ff60d971797

@@ -211,11 +211,13 @@ function scrambleCube() {
 function judgeState() {
 	var stateArray = [];
 	for (var i = 0; i < 54; i++){
-		stateArray[i] += 1;
+		stateArray[i] = 1;
+	}
+	for (var i = 0; i < 54; i++){
 		stateArray[state[i]] -= 1;
 	}
 	for (i = 0; i<54; i++){
-		if stateArray[i]{
+		if (stateArray[i] !=  0){
 			return false;
 		}
 	}
@@ -227,10 +229,10 @@ function stringInput(){
 	for (var i = 0; i < 54; i++){
 		state[i] = parseInt(stateString[2*i]);
 	}
-	string2State()
+	string2State(state);
 }
 
-function string2State() {
+function string2State(newState) {
 	var large = 0
 	var mid = 0
 	var small = 0
@@ -241,6 +243,7 @@ function string2State() {
 	}
 	document.getElementById("solution_text").innerHTML = state;
 }*/
+	state = newState;
 	for (var j = 0; j < 8; j++){
 		large = corners[j] % 100;
 		mid = Math.floor(corners[j]/100) % 100;
@@ -384,8 +387,9 @@ function string2State() {
 	state[31] = 31;
 	state[40] = 40;
 	state[49] = 49;
-	if judgeState(){
-		setStickerColors(state)
+	var stateFlags = judgeState();
+	if (stateFlags){
+		setStickerColors(state);
 		document.getElementById("solution_text").innerHTML = "Input Finished!";
 	}
 	else{
