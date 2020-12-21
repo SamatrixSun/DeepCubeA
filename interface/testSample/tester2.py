@@ -9,4 +9,3 @@ for j in range(0,99):
 		f1.write(str(num)+", ")
 	f1.write('\n')
 f1.close()
-
